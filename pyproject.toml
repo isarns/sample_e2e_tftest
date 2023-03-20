@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tftest-e2e-example"
+version = "0.1.0"
+description = ""
+authors = ["Isar Nasimov <isar.nasimov98@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tftest_e2e_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^7.2.2"
+tftest = "^1.8.2"
+boto3 = "^1.26.94"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
