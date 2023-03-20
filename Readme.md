@@ -12,7 +12,7 @@ IaC E2E tests can be used to validate that the infrastructure code provisions an
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your_username/your_repository.git
+   git clone https://github.com/isarns/sample_e2e_tftest.git
    ```
 
 2. Install Poetry:
