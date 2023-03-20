@@ -1,4 +1,4 @@
-# networking E2E
+# IAC E2E using tftest
 
 nfrastructure as code (IaC) is a practice of managing infrastructure configuration and provisioning through code. The code is stored in a repository and version-controlled, just like software code, allowing for easy collaboration and automated deployment of infrastructure.
 
@@ -47,9 +47,7 @@ IaC E2E tests can be used to validate that the infrastructure code provisions an
 
     The -x flag stops the test run on the first failure, while the -v flag provides more verbose output.
 
-## Pytest
-
-### What is Pytest?
+## What is Pytest?
 
 Pytest is a testing framework for Python. It allows you to write test functions using a simple and intuitive syntax, and provides a powerful set of tools for running and reporting on your tests.
 
