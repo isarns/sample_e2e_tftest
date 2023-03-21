@@ -66,3 +66,33 @@ The **plan_ec2_instance** fixture generates a Terraform plan for the EC2 deploym
 The test cases in the **tests** direcory use the fixtures to validate the deployed infrastructure. For example, the **test_ec2_instance_running** test case checks that the EC2 instance is in a running state.
 
 By using these fixtures, you can automate the deployment and testing of your Terraform modules, which helps to ensure that your infrastructure is always in a consistent and reliable state.
+
+```plantuml
+@startuml
+
+actor Tester
+
+Tester -> test_ec2_instance
+activate test_ec2_instance
+
+test_ec2_instance -> test_vpc
+activate test_vpc
+
+test_vpc --> test_vpc : Plan and test
+test_vpc --> test_vpc : Apply and test
+test_vpc -> test_ec2_instance
+
+test_ec2_instance --> test_ec2_instance : Plan and test
+test_ec2_instance --> test_ec2_instance : Apply and test
+test_ec2_instance -> Tester : return result from test_r53
+
+
+test_ec2_instance --> test_ec2_instance : destroy
+test_ec2_instance -> test_vpc
+deactivate test_ec2_instance
+
+
+test_vpc --> test_vpc : destroy
+
+@enduml
+```
